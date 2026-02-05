@@ -1,7 +1,7 @@
 # PR-AP
 Repositório SENAI. 
 
-## Insert optimus prime "I LOVE FAT PEOPLE!!!" image
+## Comandos BÁSICOS
 
 Início da aula. 
 1) Adicionando arquivos para o commit.
