@@ -1,0 +1,14 @@
+/* css é usado para decorar páginas. */
+/* RESET DE CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* para deixar o site bonito em todos os navegadores  */
+
+/* significa que tudo que eu escrever dentro so vai afetar o h1 no html. */
+h1{
+    text-align: center; 
+    /* muda onde o texto vai ficar */
+}
