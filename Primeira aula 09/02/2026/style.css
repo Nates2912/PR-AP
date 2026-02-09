@@ -11,4 +11,12 @@
 h1{
     text-align: center; 
     /* muda onde o texto vai ficar */
+    color: brown;
+    /* mudou a cor do título */
+    margin: 20px;
+    /* deu espaço no título */
+}
+
+p{
+    margin: 10px;
 }
