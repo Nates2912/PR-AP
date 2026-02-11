@@ -1,0 +1,30 @@
+/* RESET DE CONFIGURAÇÕES PARA OS NAVEGADORES */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    color: brown;
+    font-size: 20px;
+    margin: 20px;
+}
+
+body{
+    background-color: bisque;
+    background-image: url("assets/image.png");
+    /* use ctrl espaço para pegar a imagem  */
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+p{
+    text-align: justify;
+    font-size: 15px;
+    font-family: papyrus;
+    margin: 20px;
+}
