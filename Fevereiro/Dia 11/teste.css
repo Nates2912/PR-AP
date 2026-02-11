@@ -6,7 +6,14 @@
 }
 
 body {
+    min-height: 100vh; /* garante altura total da tela */
     background: linear-gradient(90deg, rgb(255, 84, 61), rgb(247, 172, 88));
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;           /* ativa Flexbox */
+    flex-direction: column;  /* organiza os elementos em coluna */
+    justify-content: flex-start; /* elementos começam do topo */
+    align-items: center;     /* centraliza horizontalmente */
+    padding-top: 30px;       /* dá um espaçamento do topo */
 }
 
 h1 {
@@ -19,10 +26,10 @@ h1 {
 p,
 .red-text {
     color: #fff;
-    text-align: justify;
     font-size: 25px;
-    font-family: papyrus;
     margin: 10px;
+    text-align: center; /* muda para center, antes era justify */
+    max-width: 700px;   /* limita a largura do texto para ficar bonito */
 }
 
 button {
