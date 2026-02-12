@@ -7,6 +7,15 @@
 }
 /* para deixar o site bonito em todos os navegadores  */
 
+body {
+    background-color: #fff;
+    background-image: url("./assets/image.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
 /* significa que tudo que eu escrever dentro so vai afetar o h1 no html. */
 h1{
     text-align: center; 
