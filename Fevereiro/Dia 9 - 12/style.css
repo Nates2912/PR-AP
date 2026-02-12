@@ -55,13 +55,34 @@ a{
 }
 
 /* PERSONALIZAÇÃO DA LISTA. */
+
+    
+
 h2  {
-    color: #57563a;
+    color: #49573a;
     /* mudou a cor do título */
     margin: 20px;
     /* deu espaço no título */
+     text-align: center; 
 }
 ol{
+    text-align: center; 
     color: #fff;
     margin: 10px;
+}
+
+.input-group{
+    display:flex;
+    gap: 10px;
+    justify-content:center;
+    align-items: center;
+    margin: 20px 0;
+    width: 100%;
+}
+
+input[type="text"]{
+    margin: 0px auto;
+    text-align:center;
+    border-radius: 8px;
+    outline: none;
 }
