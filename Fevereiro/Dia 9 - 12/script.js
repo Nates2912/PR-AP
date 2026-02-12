@@ -5,7 +5,7 @@ const lista = docmuent.getElementBy.Id('listaPersonagems');
 botaoAdicionar.addEventListener('click',function() {
     const nome = campoTexto.value;
 
-    if(nome.trim() !==) {
+    if(nome.trim() !== "") {
         const novoItem = document.createElement('li');
         novoItem.textContent=nome; 
 
