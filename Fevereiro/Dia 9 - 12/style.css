@@ -19,7 +19,7 @@ body {
 h1{
     text-align: center; 
     /* muda onde o texto vai ficar */
-    color: rgb(126, 108, 89);
+    color: #7e6c59;
     /* mudou a cor do título */
     margin: 20px;
     /* deu espaço no título */
@@ -29,4 +29,26 @@ p,
 .red-text {
     color: #fff;
     margin: 10px;
+}
+
+hr{
+    max-width: 50%;
+    margin: 0 auto;
+}
+
+button {
+  display:block;
+  height:auto;
+  margin: 5px auto;
+  padding: 5px;
+  border-radius: 6px;
+  text-decoration:none
+}
+
+a{
+    display:block;
+    text-align:center;
+    text-decoration:none;
+    margin: 3px auto;
+    color:#7e6c59
 }
