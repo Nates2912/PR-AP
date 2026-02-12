@@ -8,8 +8,7 @@
 /* para deixar o site bonito em todos os navegadores  */
 
 body {
-    background-color: #fff;
-    background-image: url("./assets/image.png");
+    background-image: url("/assets/image3.png");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -20,12 +19,14 @@ body {
 h1{
     text-align: center; 
     /* muda onde o texto vai ficar */
-    color: brown;
+    color: rgb(126, 108, 89);
     /* mudou a cor do título */
     margin: 20px;
     /* deu espaço no título */
 }
 
-p{
+p,
+.red-text {
+    color: #fff;
     margin: 10px;
 }
