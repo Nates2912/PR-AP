@@ -1,6 +1,6 @@
 //estruturas condicionais
 
-const idade = 19
+const idade = 13
 
 if(idade >= 18) {
     console.log("Adulto")
