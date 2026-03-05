@@ -1,5 +1,5 @@
 // variaveis
-// explicação: let transforma "nome" em uma vriavel
+// explicação: let transforma "nome" em uma variavel
 let nome = "Marta"
 let idade = "15"
 let peso = "50KG"
