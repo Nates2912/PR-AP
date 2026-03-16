@@ -1,0 +1,122 @@
+/* CSS É USADO PARA DECORAR PÁGINAS. */
+/* RESET DE CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Fonte mais limpa para o tema, mantendo o ar retrô */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/* para deixar o site bonito em todos os navegadores  */
+
+/* TEMA ENA: PALETA DE CORES DA IMAGEM */
+:root {
+    --ena-teal: #1f5e46;         /* Do quepe, shorts e botas */
+    --ena-red: #da3e39;          /* Da metade do rosto e calça */
+    --ena-creme: #fdfcd5;        /* Do rosto, camisa e punhos (Amarelo claro) */
+    --ena-creme-escura: #f4f3c0; /* Variação para profundidade */
+    --ena-preto: #000000;         /* Contornos e cabelo */
+}
+
+/* APLICAÇÃO NO CORPO (FUNDO PRINCIPAL) */
+body {
+    /* Fundo com o vermelho para dar contraste */
+    background-color: var(--ena-red);
+    color: var(--ena-preto);
+    /* Um pequeno detalhe xadrez para remeter à ENA clássica */
+    background-image: repeating-conic-gradient(from 0deg, rgba(0,0,0,0.1) 0deg 90deg, transparent 90deg 180deg) 0% 0%/40px 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* CONTAINER PRINCIPAL (A 'CAIXA' DO CONTEÚDO) */
+.container {
+    max-width: 800px;
+    margin: 40px;
+    padding: 20px;
+    /* Base creme como o rosto e a camisa */
+    background: var(--ena-creme);
+    /* Borda sólida preta, bem cartunesca */
+    border: 6px solid var(--ena-preto);
+    /* Sombra sólida verde-petróleo assimétrica */
+    box-shadow: 12px 12px 0px var(--ena-teal);
+    position: relative;
+    overflow: hidden;
+}
+
+/* TÍTULOS E CABEÇALHOS */
+h1 {
+    /* Título destacado em Vermelho com fundo creme escuro */
+    color: var(--ena-red);
+    background: var(--ena-creme-escura);
+    text-transform: uppercase;
+    text-align: center;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border: 4px solid var(--ena-preto);
+    display: block; /* Ocupa a largura total */
+}
+
+/* PARÁGRAFOS E TEXTOS */
+p {
+    /* Texto preto no fundo creme */
+    color: var(--ena-preto);
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-weight: bold;
+    padding: 10px;
+    background: rgba(255,255,255,0.4); /* Fundo sutil */
+    border: 2px solid rgba(0,0,0,0.1);
+}
+
+/* BOTÕES E LINKS INTERATIVOS */
+button, a.button {
+    /* Botões usando o Verde do quepe e shorts */
+    background: var(--ena-teal);
+    color: var(--ena-creme);
+    border: 4px solid var(--ena-preto);
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.1s ease;
+    box-shadow: 4px 4px 0px rgba(0,0,0,0.3);
+}
+
+button:hover, a.button:hover {
+    /* Ao passar o mouse, alterna para Vermelho */
+    background: var(--ena-red);
+    transform: translate(-2px, -2px);
+    box-shadow: 6px 6px 0px var(--ena-preto);
+}
+
+/* DIVISORES E DETALHES */
+hr {
+    border: none;
+    height: 8px;
+    /* Padrão de listras usando Vermelho e Verde */
+    background: repeating-linear-gradient(
+        45deg,
+        var(--ena-red),
+        var(--ena-red) 10px,
+        var(--ena-teal) 10px,
+        var(--ena-teal) 20px
+    );
+    margin: 20px 0;
+}
+
+/* EFEITO DECORATIVO SURREAL */
+.glitch-mark {
+    width: 30px;
+    height: 30px;
+    background: var(--ena-red);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: 3px solid var(--ena-preto);
+    /* Um pequeno detalhe geométrico flutuante */
+    transform: rotate(45deg);
+}
