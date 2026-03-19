@@ -1,0 +1,80 @@
+/* Definimos "variáveis" para não precisar repetir o código da cor toda hora */
+:root {
+    --fundo-pagina: #EAE6D9; /* Cor de fundo creme */
+    --fundo-card: #FFFFFF;   /* Fundo branco do cartão central */
+    --borda-suave: #A3BFB8;  /* Verde para bordas e destaques positivos */
+    --detalhe-suave: #E6B5A1; /* Coral para erros ou alertas */
+    --azul-suave: #A8BBD0;   /* Azul para o botão e estados opcionais */
+    --texto-suave: #5C5850;  /* Cinza escuro para leitura confortável */
+}
+
+/* O '*' aplica regras a todos os elementos da página de uma vez */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Garante que bordas não aumentem o tamanho dos elementos */
+    font-family: 'Courier New', Courier, monospace; /* Fonte com estilo de máquina de escrever */
+}
+
+/* Centraliza o cartão exatamente no meio da tela do navegador */
+body {
+    background-color: var(--fundo-pagina);
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    height: 100vh;           /* Altura total da janela do navegador */
+    color: var(--texto-suave);
+}
+
+/* Estilo do Logo: Letras grandes e juntas para parecer uma marca */
+.logo-texto {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -2px; /* Aproxima as letras */
+    text-transform: uppercase;
+}
+
+/* Estilo do Card: Cria aquele efeito de profundidade com a sombra sólida */
+.card {
+    background: var(--fundo-card);
+    padding: 30px;
+    width: 380px;
+    border: 4px solid var(--borda-suave);
+    box-shadow: 10px 10px 0px var(--borda-suave); /* Sombra sem "desfoque" (estilo retrô) */
+    text-align: center;
+}
+
+/* Estiliza os campos de digitação */
+.inputs input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 2px solid var(--borda-suave);
+    font-size: 1rem;
+}
+
+/* Estilo do botão e efeito de hover (ao passar o mouse) */
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--azul-suave);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s; /* Faz a mudança de cor ser suave, não brusca */
+}
+
+button:hover {
+    background-color: var(--detalhe-suave); /* Muda a cor quando o mouse está em cima */
+}
+
+/* Estilo das caixinhas que aparecem quando o resultado é gerado */
+.linha-res {
+    text-align: left;
+    margin-top: 15px;
+    padding: 8px;
+    background: var(--fundo-pagina);
+    border-left: 4px solid var(--azul-suave); /* Faixa colorida lateral */
+}

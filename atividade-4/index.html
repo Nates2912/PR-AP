@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verificador de Voto</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <header>
+            <div class="logo-texto">
+                VOTAR<span class="ponto-coral">.</span>
+            </div>
+        </header>
+
+        <h2>Consulte sua obrigação</h2>
+
+        <div class="inputs">
+            <label for="idade" style="display: block; margin-bottom: 5px; font-size: 0.8rem;">DIGITE SUA IDADE:</label>
+            <input type="number" id="idade" placeholder="Ex: 18" min="0" max="120">
+            
+            <button onclick="verificarVoto()">VERIFICAR SITUAÇÃO</button>
+        </div>
+
+        <div id="resultado"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

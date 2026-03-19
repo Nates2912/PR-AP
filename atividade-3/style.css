@@ -1,0 +1,102 @@
+/* CSS É USADO PARA DECORAR PÁGINAS. */
+
+/* PALETA DE CORES PASTEL (Inspirada na personagem da imagem) */
+:root {
+    --fundo-pagina: #EAE6D9; /* Tom creme bem suave (pele/roupa) */
+    --fundo-card: #FFFFFF;   /* Branco limpo para o cartão principal */
+    --borda-suave: #A3BFB8;  /* Verde-petróleo pastel (chapéu/shorts) */
+    --detalhe-suave: #E6B5A1; /* Coral/Ocre pastel (metade do rosto/braço) */
+    --azul-suave: #A8BBD0;   /* Azul pastel (metade do rosto/cabelo) */
+    --texto-suave: #5C5850;  /* Cinza-amarronzado escuro (suave para o texto) */
+}
+
+/* RESET DE CONFIGURAÇÕES GERAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* Fonte retrô conforme solicitado */
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--fundo-pagina); /* Fundo da página em creme suave */
+    display: flex;                                /* Ativa alinhamento flexível */
+    justify-content: center;                      /* Centraliza na horizontal */
+    align-items: center;                          /* Centraliza na vertical */
+    height: 100vh;                                /* Usa a altura total da tela */
+    color: var(--texto-suave);                    /* Cor padrão do texto */
+}
+
+/* Estilização do Logotipo em Texto */
+.logo-texto {
+    font-size: 2.5rem;         /* Tamanho grande para destaque */
+    font-weight: 900;          /* Deixa a fonte bem grossa */
+    letter-spacing: -2px;      /* Aproxima as letras para parecer um logo */
+    color: var(--texto-suave); /* Cor suave profissional */
+    margin-bottom: 10px;       /* Afasta do título abaixo */
+    text-transform: uppercase; /* Garante que fique em caixa alta */
+}
+
+.ponto-coral {
+    color: var(--detalhe-suave); /* O ponto agora é coral pastel */
+}
+
+.card {
+    background: var(--fundo-card); /* Fundo do cartão branco */
+    padding: 30px;
+    width: 380px;
+    border: 4px solid var(--borda-suave); /* Borda grossa em verde-petróleo pastel */
+    box-shadow: 10px 10px 0px var(--borda-suave); /* Sombra sólida verde para vibe retrô */
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: var(--texto-suave);
+    opacity: 0.8; /* Leve transparência para suavizar */
+}
+
+.inputs input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 2px solid var(--borda-suave); /* Borda dos campos combinando com o card */
+    font-size: 1rem;
+    color: var(--texto-suave);
+    background-color: rgba(255, 255, 255, 0.5); /* Fundo semi-transparente no input */
+}
+
+/* Tira a borda preta padrão ao clicar no input */
+.inputs input:focus {
+    outline: none;
+    border-color: var(--detalhe-suave); /* Borda fica coral ao focar */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--azul-suave); /* Botão azul pastel suave */
+    color: var(--fundo-card);            /* Texto do botão em branco */
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;                          /* Suaviza a mudança de cor */
+    margin-top: 10px;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: var(--detalhe-suave); /* Botão fica coral pastel ao passar o mouse */
+    color: var(--texto-suave);              /* Texto escuro ao passar o mouse */
+}
+
+.linha-res {
+    text-align: left;          /* Alinha os resultados à esquerda */
+    margin-top: 15px;
+    padding: 8px;
+    background: var(--fundo-pagina);   /* Fundo creme suave para cada linha */
+    border-left: 4px solid var(--azul-suave); /* Detalhe azul pastel na lateral da linha */
+}
