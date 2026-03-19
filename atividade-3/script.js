@@ -1,77 +1,81 @@
-// Cria a função 'calcular'. Ela fica "dormindo" até o botão no HTML ser clicado.
+// Criamos a nossa função principal
 function calcular() {
     
-    // --- PASSO 1: PEGAR OS DADOS DIGITADOS ---
-    
-    // document.getElementById('nota1') -> Vai lá no HTML e pega o elemento com ID 'nota1'
-    // .value -> Pega o valor exato (o número) que o usuário digitou dentro desse campo
-    // parseFloat() -> Transforma esse texto digitado em um número decimal verdadeiro para o computador fazer contas
-    // const n1 = -> Salva esse número final numa caixinha (variável constante) chamada n1
+    // ==========================================
+    // PASSO 1: A ENTRADA (Pegar as notas)
+    // ==========================================
+    // Vamos pegar o texto que o usuário digitou e transformar em número (parseFloat)
     const n1 = parseFloat(document.getElementById('nota1').value);
     const n2 = parseFloat(document.getElementById('nota2').value);
     const n3 = parseFloat(document.getElementById('nota3').value);
     
-    // Aqui pegamos a div vazia lá do HTML pelo ID dela ('resultado') e guardamos na variável 'painel'
+    // Vamos pegar a caixa vazia onde o resultado vai aparecer depois
     const painel = document.getElementById('resultado');
 
 
-    // --- PASSO 2: CONFERIR SE O USUÁRIO DEIXOU EM BRANCO ---
-    
-    // isNaN significa "Is Not a Number" (Não é um número).
-    // O símbolo || significa "OU" em programação.
-    // Lendo a linha abaixo: "Se n1 estiver vazio OU n2 estiver vazio OU n3 estiver vazio..."
+    // ==========================================
+    // PASSO 2: A VALIDAÇÃO (O controle de qualidade)
+    // ==========================================
+    // Pergunta 1: Alguma nota está em branco? (isNaN significa "Não é um número")
     if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
-        // Se a condição acima for verdadeira, ele injeta esse HTML com erro vermelho dentro do nosso painel
-        painel.innerHTML = "<div class='linha-res' style='color:red; border-left-color: red;'>ERRO: Preencha as três notas!</div>";
-        // O comando 'return' aborta a missão. Ele faz o JavaScript parar de ler o código aqui e não tenta fazer as contas
-        return; 
+        painel.innerHTML = "ERRO: Preencha todas as três notas!";
+        painel.style.color = "red"; // Pinta o texto de vermelho
+        return; // O 'return' faz o programa parar aqui e não continuar
     }
 
-
-    // --- PASSO 3: CONFERIR SE AS NOTAS SÃO REAIS (ENTRE 0 E 10) ---
-    
-    // Lendo a linha abaixo: "Se n1 for menor que 0 OU n1 for maior que 10 OU n2 menor que 0..." e assim por diante
+    // Pergunta 2: Alguma nota é menor que zero ou maior que dez?
     if (n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10 || n3 < 0 || n3 > 10) {
-        // Se alguma nota for impossível (tipo -2 ou 15), ele avisa o usuário com um erro vermelho
-        painel.innerHTML = "<div class='linha-res' style='color:red; border-left-color: red;'>ERRO: As notas devem ser entre 0 e 10!</div>";
-        // Novamente, o 'return' cancela o resto da função para não dar resultados errados
-        return; 
+        painel.innerHTML = "ERRO: As notas precisam ser de 0 a 10!";
+        painel.style.color = "red"; // Pinta o texto de vermelho
+        return; // Para o programa aqui
     }
 
 
-    // --- PASSO 4: MATEMÁTICA E LÓGICA ---
-    
-    // Agora que temos certeza que os números estão corretos, calculamos a média.
-    // Primeiro somamos n1 + n2 + n3 (entre parênteses para fazer primeiro) e depois dividimos (/) por 3
-    const media = (n1 + n2 + n3) / 3;
-    
-    // Usamos 'let' em vez de 'const' porque o valor dessas variáveis vai mudar dependendo se ele passou ou não
-    let statusTexto = "";
-    let statusCor = "";
+    // ==========================================
+    // PASSO 3: O PROCESSAMENTO (A matemática)
+    // ==========================================
+    // Agora que sabemos que os números estão corretos, fazemos a conta de padaria.
+    const soma = n1 + n2 + n3;
+    const media = soma / 3;
 
-    // SE (if) a média for menor que 7...
+
+    // ==========================================
+    // PASSO 4: A DECISÃO (A encruzilhada)
+    // ==========================================
+    // Criamos duas caixinhas vazias (let) para guardar o texto e a cor do resultado.
+    let textoResultado = "";
+    let corResultado = "";
+
+    // O computador faz a pergunta: A média é menor que 7?
     if (media < 7) {
-        statusTexto = "REPROVADO"; // O texto vira reprovado
-        statusCor = "var(--detalhe-suave)"; // Pegamos aquela cor coral (vermelha) lá do nosso arquivo CSS
-    } 
-    // SENÃO (else) - ou seja, se for 7 ou maior...
-    else {
-        statusTexto = "APROVADO"; // O texto vira aprovado
-        statusCor = "var(--borda-suave)"; // Pegamos a cor verde do nosso CSS
+        // Se for menor que 7 (Ex: 5), ele entra aqui:
+        textoResultado = "REPROVADO";
+        corResultado = "var(--detalhe-suave)"; // Vermelho/Coral
+    } else {
+        // Se não for menor que 7 (Ex: 8), ele entra aqui:
+        textoResultado = "APROVADO";
+        corResultado = "var(--borda-suave)";   // Verde
     }
 
 
-    // --- PASSO 5: MOSTRAR O RESULTADO NA TELA ---
-    
-    // painel.innerHTML = altera o conteúdo da nossa div de resultado lá no HTML.
-    // Usamos a crase (` `) para criar um texto especial que permite "injetar" nossas variáveis dentro dele usando ${ }
-    // media.toFixed(1) pega a nota (ex: 6.66666) e arredonda para uma casa decimal (ex: 6.7)
+    // ==========================================
+    // PASSO 5: A SAÍDA (Mostrar na tela)
+    // ==========================================
+    // Pegamos aquela caixa vazia (painel) e escrevemos o HTML final dentro dela.
     painel.innerHTML = `
-        <div class="linha-res"><strong>MÉDIA:</strong> ${media.toFixed(1)}</div>
+        <div class="linha-res">
+            <strong>MÉDIA:</strong> ${media.toFixed(1)}
+        </div>
         
-        <div class="linha-res" style="border-left-color: ${statusCor};">
+        <div class="linha-res" style="border-left-color: ${corResultado};">
             <strong>STATUS:</strong> 
-            <span style="color: ${statusCor}; font-weight: bold;">${statusTexto}</span>
+            <span style="color: ${corResultado}; font-weight: bold;">
+                ${textoResultado}
+            </span>
         </div>
     `;
+    
+    // Como agora deu certo, garantimos que a cor do painel volte ao normal 
+    // (caso estivesse vermelho de algum erro anterior)
+    painel.style.color = "var(--texto-suave)";
 }
