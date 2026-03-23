@@ -1,0 +1,88 @@
+/* :root é a nossa "paleta de tintas". Criamos variáveis de cores aqui. 
+   Se um dia você quiser mudar o site todo de pastel para cores neon, é só mudar aqui, e o site inteiro se atualiza sozinho! */
+:root {
+    --fundo-pagina: #EAE6D9; 
+    --fundo-card: #FFFFFF;   
+    --borda-suave: #A3BFB8;  
+    --detalhe-suave: #E6B5A1; 
+    --azul-suave: #A8BBD0;   
+    --texto-suave: #5C5850;  
+}
+
+/* O asterisco (*) seleciona TUDO no site. É como dar uma ordem geral. */
+* {
+    /* O navegador costuma colocar umas margens feias por padrão. Aqui nós "zeramos" tudo para termos controle total. */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Impede que as bordas estraguem o tamanho das caixas */
+    font-family: 'Courier New', Courier, monospace; /* Define a fonte com cara de máquina de escrever */
+}
+
+/* Estiliza o fundo da tela inteira */
+body {
+    background-color: var(--fundo-pagina); /* Usa a cor creme lá da nossa paleta (:root) */
+    
+    /* O combo "display: flex", "justify-content" e "align-items" é o truque moderno mais usado para centralizar qualquer coisa perfeitamente no meio da tela! */
+    display: flex;                                
+    justify-content: center; /* Centraliza na horizontal (esquerda/direita) */                     
+    align-items: center;     /* Centraliza na vertical (cima/baixo) */                     
+    height: 100vh;           /* Altura = 100% da tela (Viewport Height) */                     
+    color: var(--texto-suave);                    
+}
+
+/* O ponto (.) antes do nome significa que estamos chamando uma CLASS (o uniforme que definimos lá no HTML) */
+.logo-texto {
+    font-size: 2.5rem;         /* Aumenta o tamanho da letra */
+    font-weight: 900;          /* Deixa a letra bem "gorda" (negrito forte) */
+    letter-spacing: -2px;      /* Espreme as letras umas contra as outras para dar estilo de logo */
+    margin-bottom: 10px;       /* Empurra o que estiver embaixo para 10 pixels de distância (margem de fora) */
+}
+
+.ponto-coral { color: var(--detalhe-suave); }
+
+/* A nossa caixa principal, o cartão branco no meio da tela */
+.card {
+    background: var(--fundo-card); 
+    padding: 30px; /* Dá 30 pixels de "respiro" por dentro da caixa, para os textos não colarem na borda */
+    width: 380px;  /* Define a largura fixa do cartão */
+    border: 4px solid var(--borda-suave); /* Cria uma borda sólida de 4 pixels na cor verde pastel */
+    box-shadow: 10px 10px 0px var(--borda-suave); /* Cria aquela sombra dura, projetada 10px pra direita e 10px pra baixo */
+    text-align: center; /* Centraliza os textos dentro do cartão */
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.8; /* Deixa o texto 20% transparente, para ficar mais suave */
+}
+
+/* Isso afeta todas as tags <input> que estiverem dentro da div com a classe "inputs" */
+.inputs input {
+    display: block; /* Força cada campo de digitar a pular de linha (ficar um embaixo do outro) */
+    width: 100%;    /* Faz o campo ocupar todo o espaço lateral do cartão */
+    margin-bottom: 10px; /* Dá um espaço entre um campo e o de baixo */
+    padding: 12px;  /* Dá um respiro por dentro, para o texto não ficar espremido */
+}
+
+/* O :focus é um estado. Significa "como isso deve ficar quando o usuário clicar dentro para digitar?" */
+.inputs input:focus {
+    outline: none; /* Tira aquela borda preta padrão e feia do navegador */
+    border-color: var(--detalhe-suave); /* Troca a borda para a cor coral para indicar que está selecionado */
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--azul-suave); 
+    color: var(--fundo-card); /* Cor da letra do botão fica branca */           
+    border: none;             /* Remove a borda padrão do botão */
+    cursor: pointer;          /* Muda a setinha do mouse para a "mãozinha" de clicar */
+    transition: 0.3s;         /* Faz qualquer mudança de cor nesse botão demorar 0.3 segundos (dá um efeito suave de animação) */
+    margin-top: 10px;
+}
+
+/* O :hover é outro estado. Significa "como isso deve ficar quando o MOUSE PASSAR POR CIMA?" */
+button:hover {
+    background-color: var(--detalhe-suave); /* Muda o fundo do botão para coral */
+    color: var(--texto-suave);              /* Muda a letra para escuro */
+}

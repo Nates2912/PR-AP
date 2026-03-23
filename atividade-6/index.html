@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Aposentadoria</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        
+        <header>
+            <div class="logo-texto">
+                RH<span class="ponto-coral">.</span>
+            </div>
+        </header>
+
+        <h2>Análise de Aposentadoria</h2>
+
+        <div class="inputs">
+            
+            <input type="text" id="codigo" placeholder="Matrícula do empregado">
+            
+            <input type="number" id="anoNasc" placeholder="Ano de nascimento (Ex: 1960)">
+            
+            <input type="number" id="tempoTrab" placeholder="Tempo de trabalho em anos" min="0">
+            
+            <button onclick="verificarAposentadoria()">VERIFICAR</button>
+        </div>
+
+        <div id="resultado"></div>
+        
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
