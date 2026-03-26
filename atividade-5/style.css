@@ -1,0 +1,86 @@
+:root {
+    --fundo-pagina: #EAE6D9; 
+    --fundo-card: #FFFFFF;   
+    --borda-suave: #A3BFB8;  /* Verde (folha da maçã) */
+    --detalhe-suave: #E6B5A1; /* Coral (cor da fruta) */
+    --azul-suave: #A8BBD0;   
+    --texto-suave: #5C5850;  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: var(--fundo-pagina);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--texto-suave);
+}
+
+.logo-texto {
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: -2px;
+    color: var(--texto-suave);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.ponto-coral {
+    color: var(--detalhe-suave);
+}
+
+.card {
+    background: var(--fundo-card);
+    padding: 30px;
+    width: 380px;
+    border: 4px solid var(--borda-suave);
+    box-shadow: 10px 10px 0px var(--borda-suave);
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    opacity: 0.8;
+}
+
+.inputs input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 12px;
+    border: 2px solid var(--borda-suave);
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+button {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--azul-suave);
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: var(--detalhe-suave);
+}
+
+.linha-res {
+    text-align: left;
+    margin-top: 15px;
+    padding: 10px;
+    background: var(--fundo-pagina);
+    border-left: 4px solid var(--azul-suave);
+}
