@@ -1,0 +1,32 @@
+/* Container da ficha do aluno */
+.info-aluno {
+    background-color: #bdbdbd;
+    border: 3px solid;
+    border-color: #ffffff #7b7b7b #7b7b7b #ffffff; /* Efeito Relevo para fora */
+    padding: 12px;
+    width: 300px;
+    font-family: 'Courier New', Courier, monospace;
+    margin: auto;
+}
+
+/* Título da Janela */
+.info-aluno h2 {
+    background-color: #000080; /* Azul clássico da barra de título */
+    color: white;
+    margin: -12px -12px 15px -12px;
+    padding: 3px 10px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+/* Estilo Display Digital para os dados */
+.info-aluno p {
+    background-color: #000;
+    color: #00ff00; /* Verde digital (estilo radar) */
+    padding: 6px;
+    margin: 5px 0;
+    border: 2px solid;
+    border-color: #7b7b7b #ffffff #ffffff #7b7b7b; /* Efeito Relevo para dentro */
+    font-size: 15px;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}

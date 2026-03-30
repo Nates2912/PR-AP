@@ -1,0 +1,44 @@
+/* Container principal - A Janela */
+.info-curso {
+    background-color: #bdbdbd;
+    border: 3px solid;
+    border-color: #ffffff #7b7b7b #7b7b7b #ffffff; /* Efeito 3D Outset */
+    padding: 10px;
+    width: fit-content;
+    min-width: 250px;
+    font-family: 'Courier New', Courier, monospace;
+    image-rendering: pixelated;
+    margin: auto;
+}
+
+/* Título - Estilo Barra de Tarefas ou Display */
+.info-curso h2 {
+    background-color: #000080; /* Azul clássico do Windows */
+    color: white;
+    margin: -10px -10px 15px -10px;
+    padding: 4px 8px;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #7b7b7b;
+
+}
+
+/* Cada linha de dado - Estilo 'Display de Score' */
+.info-curso p {
+    background-color: #000;
+    color: #ff0000; /* Vermelho digital das bombas */
+    padding: 5px 10px;
+    margin: 8px 0;
+    border: 2px solid;
+    border-color: #7b7b7b #ffffff #ffffff #7b7b7b; /* Efeito 3D Inset */
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Detalhe extra: realce nos labels */
+.info-curso p::first-line {
+    color: #00ff00; /* Verde neon para os títulos dos campos, se quiser variar */
+}
