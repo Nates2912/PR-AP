@@ -1,0 +1,116 @@
+/* Container principal do formulário - Estilo Pergaminho de Procurado */
+.formulario {
+    max-width: 500px;
+    margin: 40px auto; 
+    padding: 32px;
+    background-color: #f4e4bc; /* Cor de papel envelhecido/pergaminho */
+    background-image: radial-gradient(#f4e4bc 70%, #e2d1a6 100%);
+    border: 8px solid #5d4037; /* Borda de madeira escura */
+    border-radius: 4px; /* Cantos mais retos como um cartaz */
+    box-shadow: 10px 10px 0px rgba(0, 0, 0, 0.2); /* Sombra sólida estilo mangá */
+    font-family: 'Courier New', Courier, monospace; /* Fonte que lembra máquina de escrever/cartaz de recompensa */
+    position: relative;
+}
+
+/* Títulos das seções - Estilo WANTED */
+.formulario h2 {
+    color: #b71c1c; /* Vermelho forte (cor do bando do chapéu de palha) */
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 24px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    border-bottom: 3px double #5d4037;
+    padding-bottom: 10px;
+}
+
+/* Layout do form */
+.formulario form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Estilização dos Inputs - Estilo Escrita à Tinta */
+.formulario input {
+    padding: 14px 16px;
+    background-color: #fff9eb; /* Papel mais claro */
+    border: 2px solid #8d6e63;
+    border-radius: 0; /* Inputs quadrados para um ar rústico */
+    font-size: 1rem;
+    color: #3e2723; /* Marrom café (tinta velha) */
+    font-family: 'Courier New', Courier, monospace;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+/* Efeito ao clicar no input (Focus) - Azul Marinho */
+.formulario input:focus {
+    border-color: #0277bd; /* Azul Marinho/Oceano */
+    box-shadow: 0 0 8px rgba(2, 119, 189, 0.3);
+}
+
+.formulario input::placeholder {
+    color: #a1887f;
+}
+
+/* Estilização do Botão - O Tesouro (Gold) */
+.formulario button {
+    background: #f9d71c; /* Amarelo do chapéu de palha */
+    color: #3e2723;
+    border: 3px solid #5d4037;
+    padding: 14px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s transform;
+    margin-top: 8px;
+}
+
+/* Efeito ao passar o mouse no botão */
+.formulario button:hover {
+    background-color: #ffd600;
+    transform: scale(1.03); /* Leve "pulo" ao passar o mouse */
+    box-shadow: 0 4px 0px #5d4037;
+}
+
+/* Linha divisória - Estilo Corda/Linha de Mapa */
+.formulario hr {
+    border: none;
+    height: 4px;
+    background-image: linear-gradient(to right, #5d4037 50%, transparent 50%);
+    background-size: 15px 100%; /* Linha tracejada que lembra rota de mapa */
+    margin: 32px 0;
+}
+
+/* Estilização da Lista de Personagens */
+.formulario ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Cada item da lista (Mini Cartaz) */
+.formulario li {
+    background-color: #eaddca;
+    padding: 14px 16px;
+    border: 1px solid #d7ccc8;
+    color: #5d4037;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-left: 10px solid #f9d71c; /* Detalhe amarelo na lateral */
+    transition: all 0.3s ease;
+}
+
+.formulario li:hover {
+    background-color: #dcbfa6;
+    transform: translateX(10px);
+    border-left-color: #b71c1c; /* Muda de amarelo para vermelho ao focar */
+}

@@ -1,0 +1,49 @@
+/* Estilização do Rodapé - Tema Grand Line / One Piece */
+.footer {
+    /* Um marrom profundo que lembra madeira de navio (Adam Wood) */
+    background-color: #2b1d11; 
+    text-align: center;
+    padding: 40px 20px;
+    
+    /* Uma borda dourada grossa, como o acabamento de um baú de tesouro */
+    border-top: 5px solid #d4af37; 
+    
+    /* Sombra interna para dar um efeito de profundidade no convés */
+    box-shadow: inset 0 10px 20px rgba(0, 0, 0, 0.5);
+    
+    margin-top: auto; 
+    position: relative;
+    overflow: hidden;
+}
+
+/* Detalhe decorativo opcional: uma linha que lembra uma corda */
+.footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-image: repeating-linear-gradient(45deg, #5d4037, #5d4037 10px, #3e2723 10px, #3e2723 20px);
+    opacity: 0.6;
+}
+
+/* Estilização do texto dentro do rodapé */
+.footer p {
+    margin: 0;
+    /* Cor de pergaminho claro para contrastar com a madeira escura */
+    color: #f4e4bc; 
+    font-size: 1rem;
+    line-height: 1.8;
+    /* Fonte estilo máquina de escrever ou rústica */
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+/* Estilo para links ou créditos extras no footer */
+.footer p strong {
+    color: #f9d71c; /* O amarelo vibrante do bando */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}

@@ -1,0 +1,61 @@
+/* Fundo do corpo - O Azul Profundo da Grand Line */
+body {
+    background-color: #0a192f; /* Azul marinho profundo (oceano à noite) */
+    background-image: 
+        radial-gradient(circle at 20% 30%, rgba(255, 255, 255, 0.05) 0%, transparent 10%),
+        radial-gradient(circle at 80% 70%, rgba(255, 255, 255, 0.05) 0%, transparent 10%); /* Leves pontos que lembram estrelas ou reflexos na água */
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace; /* Fonte de diário de bordo */
+}
+
+/* Estilização do Cabeçalho - Tema Rei dos Piratas */
+.header {
+    /* Gradiente que vai do azul oceano para o azul profundo */
+    background: linear-gradient(to bottom, #0277bd 0%, #01579b 100%); 
+    padding: 40px 40px;
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    
+    /* Borda amarela vibrante (cor do chapéu e do ouro) */
+    border-bottom: 6px solid #f9d71c; 
+    
+    /* Sombra que lembra o brilho do sol no mar ou uma aura de Haki */
+    box-shadow: 0 10px 30px rgba(249, 215, 28, 0.2); 
+    position: relative;
+}
+
+/* Detalhe extra: Uma linha vermelha fina acima do amarelo, como a fita do chapéu do Luffy */
+.header::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background-color: #b71c1c; /* Vermelho icônico */
+}
+
+/* Estilização do texto (O Título da Aventura) */
+.header div {
+    color: #ffffff; /* Branco puro para contraste */
+    font-size: 2.5rem;
+    font-weight: 900;
+    letter-spacing: 8px; /* Espaçamento de impacto épico */
+    text-transform: uppercase;
+    font-family: 'Arial Black', Gadget, sans-serif; /* Fonte pesada e impactante como o logo do anime */
+    
+    /* Efeito de Camadas: Sombra vermelha e contorno preto estilo Mangá */
+    text-shadow: 
+        3px 3px 0px #b71c1c, 
+        6px 6px 0px rgba(0, 0, 0, 0.8);
+    
+    /* Animação sutil de flutuação (como um navio no mar) */
+    animation: float 3s ease-in-out infinite;
+}
+
+/* Animação de balanço marítimo */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
